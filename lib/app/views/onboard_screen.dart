@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vintage_cars_sell/app/constants.dart';
-import 'package:flutter_vintage_cars_sell/app/views/main/homepage.dart';
+import '../constants.dart';
+import 'main/homepage.dart';
 
 class OnboardScreen extends StatelessWidget {
   const OnboardScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +27,8 @@ class OnboardScreen extends StatelessWidget {
           const SizedBox(height: kDefaultPadding * 2),
           GestureDetector(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const MyHomePage();
-              }));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const MyHomePage()));
             },
             child: Container(
               height: 50,
